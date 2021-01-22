@@ -7,7 +7,7 @@ import requests
 import dateparser
 import datetime as dt
 from binance.client import Client
-from datetime import datetime, timedelta, date
+from datetime import datetime, timedelta
 
 cur_path=os.path.abspath(os.getcwd())
 

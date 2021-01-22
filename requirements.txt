@@ -1,0 +1,5 @@
+pytz
+datetime
+requests
+dateparser
+python-binance

@@ -1,4 +1,3 @@
-import platform
 from utils import *
 from config import args
 
