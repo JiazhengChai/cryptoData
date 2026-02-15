@@ -9,7 +9,7 @@ from unittest import mock
 import pytest
 
 # Add project root to path
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from exchanges import (
     _build_symbol,
@@ -304,7 +304,7 @@ class TestCLIHelp:
         result = subprocess.run(
             [sys.executable, "main.py", "--help"],
             capture_output=True, text=True,
-            cwd=os.path.dirname(os.path.abspath(__file__)),
+            cwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
         )
         assert result.returncode == 0
         assert "exchange" in result.stdout
@@ -317,7 +317,7 @@ class TestCLIHelp:
         result = subprocess.run(
             [sys.executable, "main.py", "--list_exchanges"],
             capture_output=True, text=True,
-            cwd=os.path.dirname(os.path.abspath(__file__)),
+            cwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
         )
         assert result.returncode == 0
         assert "binance" in result.stdout
@@ -329,7 +329,7 @@ class TestCLIHelp:
         result = subprocess.run(
             [sys.executable, "main.py", "--list_timeframes", "--exchange", "binance"],
             capture_output=True, text=True,
-            cwd=os.path.dirname(os.path.abspath(__file__)),
+            cwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
         )
         assert result.returncode == 0
         assert "1h" in result.stdout

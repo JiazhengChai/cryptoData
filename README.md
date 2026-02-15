@@ -93,8 +93,13 @@ Date, Open, High, Low, Close, Volume
 ## Running Tests
 
 ```bash
-pip install pytest
-python -m pytest test_exchanges.py -v
+pytest
+```
+
+Or for verbose output:
+
+```bash
+pytest -v
 ```
 
 ## Contributing

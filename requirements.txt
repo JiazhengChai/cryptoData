@@ -2,3 +2,4 @@ ccxt>=4.0
 requests
 dateparser
 pytz
+pytest
