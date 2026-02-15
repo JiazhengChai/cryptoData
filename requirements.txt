@@ -1,5 +1,4 @@
-pytz
-datetime
+ccxt>=4.0
 requests
 dateparser
-python-binance
+pytz
